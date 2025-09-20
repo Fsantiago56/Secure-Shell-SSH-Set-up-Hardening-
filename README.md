@@ -16,7 +16,7 @@ This lab focuses on setting up and hardening **SSH (Secure Shell)** on an Ubuntu
 Install the OpenSSH server on Ubuntu and ensure the service is running.
 
 <details>
-  <summary>Click to view commands</summary>
+  <summary>Click to view commands & results</summary>
 
   ```bash
   # Update system packages
@@ -31,7 +31,11 @@ Install the OpenSSH server on Ubuntu and ensure the service is running.
 
   # Check SSH service status
   sudo systemctl status ssh
-  ```bash
-```
-![Screenshot](blob:https://imgur.com/73531800-e18a-42e9-835f-96347ac4a16b)
+  ```
+<details>
+  <summary>Click to view results</summary>
+<p align="center">✅Execution of commands resulted in SSH being active and running✅!
+<p align="center">
+
+<img src="https://i.imgur.com/tvAz3SS.png" height="60%" width="60%" alt="SSH Setup"/>
 
