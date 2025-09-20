@@ -15,7 +15,7 @@ This lab focuses on setting up and hardening **SSH (Secure Shell)** on an Ubuntu
 **Description:**  
 Install the OpenSSH server on Ubuntu and ensure the service is running.
 
-### 🖥️ Commands to Run (In Linux Terminal)
+### 🖥️ Commands to Run (Ubuntu Linux Terminal)
 <details>
   <summary>📌Show Commands  </summary>
 
