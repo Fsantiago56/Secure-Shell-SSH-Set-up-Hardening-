@@ -10,13 +10,14 @@ This lab focuses on setting up and hardening **SSH (Secure Shell)** on an Ubuntu
 
 ## 🛠️ Lab Walkthrough
 
-### Step 1: Install and Enable OpenSSH
+### 🔹Step 1: Install and Enable OpenSSH
 
 **Description:**  
 Install the OpenSSH server on Ubuntu and ensure the service is running.
 
+### 🖥️ Commands to Run (In Linux Terminal)
 <details>
-  <summary>Click to view commands & results</summary>
+  <summary>📌Show Commands  </summary>
 
   ```bash
   # Update system packages
@@ -31,11 +32,28 @@ Install the OpenSSH server on Ubuntu and ensure the service is running.
 
   # Check SSH service status
   sudo systemctl status ssh
-  ```
-<details>
-  <summary>Click to view results</summary>
+```
+ </details>
+  <details>
+    <summary>Click to view results</summary>
 <p align="center">✅Execution of commands resulted in SSH being active and running✅!
-<p align="center">
-
 <img src="https://i.imgur.com/tvAz3SS.png" height="60%" width="60%" alt="SSH Setup"/>
+ </details>
+
+### 🔹Step 2 – Generate SSH Keys (on Windows Host)
+
+Instead of using passwords, we’ll generate an **SSH key pair** on the Windows host machine.  
+This will create a **private key** (kept secret) and a **public key** (shared with the server).  
+
+
+
+### 🖥️ Commands to Run (in PowerShell)
+
+<details>
+<summary>📌 Show Commands</summary>
+
+```powershell
+# Generate a new 4096-bit RSA key pair
+ssh-keygen -t rsa -b 4096
+
 
