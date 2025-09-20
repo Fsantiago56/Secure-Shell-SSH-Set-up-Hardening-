@@ -35,7 +35,7 @@ Install the OpenSSH server on Ubuntu and ensure the service is running.
 ```
  </details>
   <details>
-    <summary>Click to view results</summary>
+    <summary>Click to view results✅</summary>
 <p align="center">✅Execution of commands resulted in SSH being active and running✅!
 <img src="https://i.imgur.com/tvAz3SS.png" height="60%" width="60%" alt="SSH Setup"/>
  </details>
@@ -55,5 +55,16 @@ This will create a **private key** (kept secret) and a **public key** (shared wi
 ```powershell
 # Generate a new 4096-bit RSA key pair
 ssh-keygen -t rsa -b 4096
+```
+</details>
+  <details>
+    <summary>Click to view results✅</summary>
+    <p>
+👉 Two files are created inside your `~/.ssh/` directory:<p>
+-**id_rsa** → 🔒 Private key(keep this safe, do **not** share)<p>
+-**id_rsa.pub** → 🔑 Public key (this will be copied to the Ubuntu VM in Step 3)<p>
+  <p align="center">
+<img src="https://i.imgur.com/3pErgXH.png" height="60%" width="60%" alt="SSH Setup"/>
+ </details>
 
 
