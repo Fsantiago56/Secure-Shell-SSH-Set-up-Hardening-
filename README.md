@@ -67,7 +67,7 @@ ssh-keygen -t rsa -b 4096
 <img src="https://i.imgur.com/3pErgXH.png" height="60%" width="60%" alt="SSH Setup"/>
  </details>
  
-## Step 3: Copy/Add Public Key to Ubuntu  
+### Step 3: Copy/Add Public Key to Ubuntu  
 
 Now we’ll add the **public key** generated on your Windows host into the Ubuntu VM to allow SSH key-based authentication.  
 
