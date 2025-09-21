@@ -106,8 +106,9 @@ ls -l ~/.ssh/authorized_keys
 ```
   <p align="center">
 <img src="https://i.imgur.com/U6buB5p.png" height="60%" width="60%" alt="SSH Setup"/>
+
  
-### Permissions Explanation: <p>
+Explanation:
 
 .ssh directory (drwx------) → 700<p>
 - d     → it’s a directory<p>
@@ -121,3 +122,43 @@ authorized_keys file (-rw-------) → 600<p>
 
 File sizes (4096 for folder, 725 for file) → just how much data is inside, not related to permissions<p>
  </details>
+ 
+### Step 4: Test SSH Connection from Windows Host
+
+This step verifies that the SSH key-based authentication works, allowing secure login to the Ubuntu/Kali VM without using a password (after entering the passphrase if your key has one). <p>
+**Be Prepared to encounter some roadblocks as this step can be challenging when troubleshooting possible issues**<p>
+
+
+---
+### 🖥️ Commands to Run (in PowerShell)
+<details>
+  <summary>📌Show commands</summary>
+
+
+```powershell
+# Connect to the VM using the private key
+ssh -i $env:USERPROFILE\.ssh\id_rsa <username>@<vm-ip>
+```
+Notes:
+- Replace <username> with your VM user<p>
+- Replace <vm-ip> with your VM’s IP address.<p>
+- If your key has a passphrase, you will be prompted to enter it once.<p>
+</details>
+ <details>
+  <summary>Click to view results✅</summary> 
+<p>
+When successful, you should see:<p>
+  <p align="center">
+<img src="https://i.imgur.com/aiJXZXW.png" height="60%" width="60%" alt="SSH Setup"/>
+    <p>
+Explanation :<p>
+  
+-Private Key (id_rsa): Stays on your Windows host; used to authenticate you to the VM.<p>
+
+-Public Key (id_rsa.pub): Stored on the VM in ~/.ssh/authorized_keys.<p>
+
+-SSH first checks if the key pair matches. If correct, it logs you in without asking for your VM password.<p>
+
+-The passphrase on your private key is an additional security layer. You can keep it for safety or remove it if you want automatic login.<p>
+
+-The warning about .zsh_history is not related to SSH and can be ignored or fixed separately.<p>
