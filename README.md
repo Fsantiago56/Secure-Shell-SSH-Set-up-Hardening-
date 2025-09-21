@@ -11,7 +11,7 @@ This lab focuses on setting up and hardening **SSH (Secure Shell)** on an Ubuntu
 ## 🛠️ Lab Walkthrough
 
 ### 🔹Step 1: Install and Enable OpenSSH
-
+---
 **Description:**  
 Install the OpenSSH server on Ubuntu and ensure the service is running.
 
@@ -41,7 +41,7 @@ Install the OpenSSH server on Ubuntu and ensure the service is running.
  </details>
 
 ### 🔹Step 2 – Generate SSH Keys (on Windows Host)
-
+---
 Instead of using passwords, we’ll generate an **SSH key pair** on the Windows host machine.  
 This will create a **private key** (kept secret) and a **public key** (shared with the server).  
 
@@ -68,10 +68,9 @@ ssh-keygen -t rsa -b 4096
  </details>
  
 ### 🔹Step 3 - Copy/Add Public Key to Ubuntu  
-
+---
 Now we’ll add the **public key** generated on your Windows host into the Ubuntu VM to allow SSH key-based authentication.  
 
----
 ### 🖥️ Commands to Run (in Ubuntu Linux)
 
 ### 🔑 Manual Method (on Ubuntu VM)  
