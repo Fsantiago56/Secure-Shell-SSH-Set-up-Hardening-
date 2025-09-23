@@ -162,3 +162,8 @@ Explanation :<p>
 -The passphrase on your private key is an additional security layer. You can keep it for safety or remove it if you want automatic login.<p>
 
 -The warning about .zsh_history is not related to SSH and can be ignored or fixed separately.<p>
+</details>
+
+
+
+
