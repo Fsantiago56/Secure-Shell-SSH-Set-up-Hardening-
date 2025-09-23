@@ -123,7 +123,7 @@ authorized_keys file (-rw-------) → 600<p>
 File sizes (4096 for folder, 725 for file) → just how much data is inside, not related to permissions<p>
  </details>
  
-### Step 4: Test SSH Connection from Windows Host
+### 🔹Step 4: Test SSH Connection from Windows Host
 
 This step verifies that the SSH key-based authentication works, allowing secure login to the Ubuntu/Kali VM without using a password (after entering the passphrase if your key has one). <p>
 **Be Prepared to encounter some roadblocks as this step can be challenging when troubleshooting possible issues**<p>
@@ -164,6 +164,35 @@ Explanation :<p>
 -The warning about .zsh_history is not related to SSH and can be ignored or fixed separately.<p>
 </details>
 
+### 🔹Step 5 – Disable Password Login
+
+We’ll disable password-based logins in the SSH configuration file. This ensures attackers can’t brute-force your password, and only SSH keys will work.
+---
+
+🖥️ Commands to Run (on Ubuntu VM)
+<details> <summary>📌 Show Commands</summary>
+# Open the SSH configuration file
+sudo nano /etc/ssh/sshd_config
+
+# Inside the file, find and update this line:
+PasswordAuthentication no     # Disable password login
 
 
+Save and exit (CTRL + O, then CTRL + X).
 
+# Restart SSH service to apply changes
+sudo systemctl restart ssh
+
+</details>
+
+<details> <summary>Click to view results✅</summary>
+
+Password logins are now disabled.
+
+SSH now accepts connections only with keys.
+
+When successful, you should see:<p>
+  <p align="center">
+<img src="https://i.imgur.com/mJigi33.png" height="60%" width="60%" alt="SSH Setup"/>
+    <p>
+    
