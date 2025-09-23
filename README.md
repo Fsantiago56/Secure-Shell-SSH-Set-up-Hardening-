@@ -171,10 +171,13 @@ We’ll disable password-based logins in the SSH configuration file. This ensure
 
 🖥️ Commands to Run (on Ubuntu VM)
 <details> <summary>📌 Show Commands</summary>
+  
+  ```bash
 # Open the SSH configuration file
 sudo nano /etc/ssh/sshd_config
 
 # Inside the file, find and update this line:
+
 PasswordAuthentication no     # Disable password login
 
 
@@ -182,7 +185,16 @@ Save and exit (CTRL + O, then CTRL + X).
 
 # Restart SSH service to apply changes
 sudo systemctl restart ssh
+```
+This is inside the SSH configuration file: <p>
+  <p align="center">
 
+<img src="https://i.imgur.com/DP0Ygmi.png" height="60%" width="60%" alt="SSH Setup"/>
+    <p>
+  This is restarting SSH before attempting to connect to VM using Host with just Passkey: <p>
+        <p align="center">
+<img src="https://i.imgur.com/cNZrw03.png" height="60%" width="60%" alt="SSH Setup"/>
+    <p>
 </details>
 
 <details> <summary>Click to view results✅</summary>
@@ -195,4 +207,36 @@ When successful, you should see:<p>
   <p align="center">
 <img src="https://i.imgur.com/mJigi33.png" height="60%" width="60%" alt="SSH Setup"/>
     <p>
-    
+ </details>
+
+### 📝 Closing Notes
+
+In this lab, I successfully set up and hardened SSH on my Ubuntu VM inside VirtualBox:
+
+✅ Installed and enabled OpenSSH.
+
+✅ Generated SSH key pairs on the Windows host.
+
+✅ Added the public key securely to the Ubuntu VM.
+
+✅ Verified SSH key-based authentication from Windows host.
+
+✅ Hardened SSH by disabling password logins.
+
+### 💡 Key Takeaways
+
+SSH keys are far more secure than passwords.
+
+Disabling passwords prevents brute-force attacks.
+
+SSH hardening is an essential skill for real-world sysadmins and cybersecurity professionals.
+
+
+### 🚀 Next Steps if you wanna progress:
+
+Configure Fail2Ban to block repeated failed login attempts.
+
+Use firewall rules (UFW) to allow only specific IPs on the SSH port.
+
+Expand the lab by connecting to the VM from another device on your network.
+ 
